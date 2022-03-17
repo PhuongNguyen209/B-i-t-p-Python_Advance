@@ -1,0 +1,23 @@
+{% if messageSent %}
+<div class="container">
+    <h3><strong>Email Successfully sent </strong></h3>
+</div>
+{% else %}
+<div class="container">
+    <h3><strong>Send email</strong></h3>
+
+    <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <br>
+        <div class="text-center">
+            <input 
+            type="submit"
+            class="btn btn-secondary"
+            style="width: 5%"
+            value="Send e-mail"
+            />
+        </div>
+    </form>
+</div>
+
+{% endif %}

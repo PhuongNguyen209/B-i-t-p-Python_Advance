@@ -1,6 +1,7 @@
 from distutils.command.upload import upload
 from django.shortcuts import render
 from django.db import models
+# from PIL import Image
 
 # Create your views here.
 from django.http import HttpResponse
